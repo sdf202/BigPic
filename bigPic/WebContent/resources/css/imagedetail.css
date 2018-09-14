@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+.c-container{
+	width: 100%;
+	height: auto;
+	
+}
+.c-menu{
+	
+	width:100%;
+	display:flex;
+	justify-content: space-between;
+
+	
+}
+.card-body{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+.c-div{
+	margin-left: 16.5%;
+   margin-right: 16.5%;
+}
