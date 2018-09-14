@@ -10,15 +10,17 @@
 	<div class="card text-center">
 	<div class="card-header">
 		<div>
-			<input type="button" class="btn" value="뒤로가기" onclick="goBack()"/>
 			<a href="#"><i class="fas fa-ellipsis-h"></i></a>
+			<input type="button" class="btn" value="뒤로가기" onclick="goBack()"/>
 		</div>
-		
+		<div>
+			<button type="button" class="btn">보내기</button>
+			<button type="button" class="btn">저장</button>
+		</div>
 	</div>
 	<div class="card-body">
-		<button type="button" class="btn">보내기</button>
-		<button type="button" class="btn">저장</button>
-		<img src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
+		<img
+				src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
 	</div>
 	</div>
 	<script type="text/javascript">

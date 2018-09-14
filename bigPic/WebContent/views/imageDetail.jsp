@@ -12,7 +12,7 @@
 	
 </head>
 <body>
-<jsp:include page="BigPic.jsp"></jsp:include>
+<jsp:include page="imageDetailTop.jsp"></jsp:include>
 <jsp:include page="body.jsp">
 	<jsp:param value="keyword" name=""/>
 </jsp:include>
