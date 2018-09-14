@@ -35,5 +35,16 @@
 	cursor: zoom-out;
 }
 
+.commentBoxTop{
+	display: flex;
+	justify-content: space-between;
+}
+.commentBoxMid{
+	display: none;
+}
+.commentBoxBotT{
+	display: flex;
+	justify-content: space-between;
+}
 
 

@@ -47,7 +47,6 @@
 	</div>
 
 
-
 	<div class="card text-center">
 		<div class="card-header" align="left">
 			<div>
@@ -59,7 +58,7 @@
 		<div class="card-body">
 			<div class="left" onclick="goBack()"></div>
 			<div class="c-container">
-				<div class = "c-div">
+				<div class="c-div">
 					<div class="c-menu">
 						<div class="dropdown">
 							<div class="dropdownt" data-toggle="dropdown"
@@ -80,19 +79,53 @@
 						</div>
 					</div>
 				</div>
-				<div class ="item">
+				<div class="item">
 					<img
 						src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
-				
+
 				</div>
+				<div>
+					<div class="commentBox">
+						<div class="commentBoxTop">
+							<div>
+								<h3>댓글</h3>
+							</div>
+							<div>
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</div>
+						<div class="commentBoxMid">
+							<div>
+								<p>피드백을 공유하거나 질문을 하거나 칭찬을 남겨주세요</p>
+							</div>
+							<div>
+								<textarea name="" id="" cols="100" rows="5" placeholder="댓글 추가"
+									style="resize: none;"></textarea>
+							</div>
+						</div>
+						<div class="commentBoxBot">
+							<div class="commentBoxBotT">
+								<div><i class="fas fa-user-circle"></i></div>
+								<div class="">xxx님의 댓글</div>
+								<div class="">Hits</div>
+							</div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+
 			</div>
+
 			<div class="right" onclick="goBack()"></div>
 		</div>
 	</div>
+
+	<div>
+		<h3>유사한 핀 더보기</h3>
+	</div>
 	<script type="text/javascript">
-		function goBack() {
-			window.history.back();
-		}
+		
+		
 	</script>
 </body>
 </html>
