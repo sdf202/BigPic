@@ -57,7 +57,7 @@
 
 		</div>
 		<div class="card-body">
-			<div></div>
+			<div class="left" onclick="goBack()"></div>
 			<div class="c-container">
 				<div class = "c-div">
 					<div class="c-menu">
@@ -80,12 +80,13 @@
 						</div>
 					</div>
 				</div>
-				<div>
+				<div class ="item">
 					<img
 						src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
+				
 				</div>
 			</div>
-			<div></div>
+			<div class="right" onclick="goBack()"></div>
 		</div>
 	</div>
 	<script type="text/javascript">
