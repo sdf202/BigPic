@@ -73,20 +73,20 @@ body {
 .item img {
 	max-width: 100%;
 }
+/* 아이콘 */
 
-.fas:hover {
+.fa-ellipsis-h:hover {
 	background-color: red;
 }
 
-.fas:active {
+.fa-ellipsis-h:active {
 	outline-color: green;
 	outline-style: solid;
 }
 
-/* 아이콘 */
-.fas {
+.fa-ellipsis-h {
 	color: #000;
-	/* display: table-cell; */
+	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;

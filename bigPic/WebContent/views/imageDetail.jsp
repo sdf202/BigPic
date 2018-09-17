@@ -8,11 +8,12 @@
 <title>Image Detail</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="resources/css/main.css" />
+<link rel="stylesheet" href="resources/css/imagedetail.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	
 </head>
 <body>
-<jsp:include page="BigPic.jsp"></jsp:include>
+<jsp:include page="imageDetailTop.jsp"></jsp:include>
 <jsp:include page="body.jsp">
 	<jsp:param value="keyword" name=""/>
 </jsp:include>
@@ -28,5 +29,6 @@
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
 
 <script type="text/javascript" src="resources/js/popup.js"></script>
+<script type="text/javascript" src="resources/js/detail.js"></script>
 </body>
 </html>
