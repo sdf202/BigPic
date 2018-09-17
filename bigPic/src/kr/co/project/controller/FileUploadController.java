@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,22 +19,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-
-
-
+@Controller
 public class FileUploadController {
+	
 	FileValidator fileValidator;
 
 	public void setFileValidator(FileValidator fileValidator) {
 		this.fileValidator = fileValidator;
 	}
 
-	@RequestMapping(value = "/upload/upload.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/upload.do", method = RequestMethod.GET)
 	public String uploadForm() {
-		return "upload/form";
+		return "uploadPage";
 	}
 
-	@RequestMapping(value = "/upload/upload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/upload.do", method = RequestMethod.POST)
    public ModelAndView upliad(@ModelAttribute("uploadFile")UploadFile file, HttpServletRequest req, BindingResult result) {
       //업로드한 파일 객체 가져오기
       //내부적으로 임의의 경로에 파일 보관한다.
@@ -43,7 +43,7 @@ public class FileUploadController {
       // 파일 유효성 검사 후 성공하면 계속 아니면 stop
       fileValidator.validate(file, result);
       if(result.hasErrors()) {
-    	  return new ModelAndView("upload/form");
+    	  return new ModelAndView("uploadPage");
       }
       
       
@@ -67,20 +67,20 @@ public class FileUploadController {
       }
       ModelAndView mav=new ModelAndView();
       mav.addObject("fileName", f.getName());
-      mav.setViewName("upload/uploadFile");
-      mav.addObject("filePath", "../data/"+f.getName());
+      mav.setViewName("uploadFile");
+      mav.addObject("filePath", "data/"+f.getName());
       
       
       return mav;
    }
 	
 	//@responsbody 
-	// 웹애플리케이션의 모델층에서 리턴한 경로가
+	// 웹애플리케이션의 모델층에서 리턴한 겨로가
 	// 보통 jsp (뷰)로 포워딩 하여 출력 
 	// 이때 뷰페이지를 통하지 않고 바로 출력스트림으로 보내는 것
 	// 파일 다운로드, ajax
 	
-	@RequestMapping("/upload/download.do")
+	@RequestMapping("/download.do")
 	@ResponseBody
 	public byte[] download(HttpServletRequest req, @RequestParam("fileName")String fileName, HttpServletResponse resp) throws IOException {
 		// download.do?filename = ${fileName}
