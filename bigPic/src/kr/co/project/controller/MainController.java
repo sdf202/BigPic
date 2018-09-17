@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 	
-	 @RequestMapping("/main.do")
+	/* @RequestMapping("/main.do")
 	   public ModelAndView hello() {
 	      return new ModelAndView("mainPage","msg","안뇽");      
-	   }
+	   }*/
 	
 	 @RequestMapping("/detail.do")
 	 public ModelAndView detail() {

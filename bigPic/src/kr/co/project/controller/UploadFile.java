@@ -13,4 +13,5 @@ public class UploadFile {
 		this.file = file;
 	}
 
-}	
+	
+}

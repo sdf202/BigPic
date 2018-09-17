@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -52,11 +54,55 @@
           <a class="dropdown-item" href="#">로그아웃</a>
         </div>
       </li>
-     
+		
+		
+		<li class="nav-item">   
+             <c:choose>
+                <c:when test="${'admin' eq sessionScope.sessionId}">
+                   <a class="nav-link" href="#" onclick="adminPageMove();" >
+                      <c:url value="${sessionScope.sessionId }" />
+                   </a>
+                </c:when>
+                <c:otherwise>
+                 <a class="nav-link" href="#" onclick="adminPageMove();" >
+                      <c:url value="${sessionScope.sessionId }" />
+                   </a>
+                </c:otherwise>
+             </c:choose>
+         </li>
+		
+		<li class="nav-item">
+        	<a class="nav-link" href="#" style="color:red">
+        		<c:out value="${sessionScope.sessionId }"></c:out>
+        	</a>
+      	</li>
+      	<li></li>
+      	<li></li>
+		<li class="nav-item">
+			<a class="nav-link" id="logoutBtn" href="#">LOGOUT</a>
+		</li>
     </ul>
     
   </div>
 </nav>
-
+<script type="text/javascript">
+$(function(){
+    $("#logoutBtn").click(function(){
+       var result=confirm("로그아웃 하시겠습니까?");
+       if(result){
+          location.href="logout.do";
+       }else{
+          
+       }
+    })
+ })
+ function myPageMove(){
+      location.href="myPage.do";
+   }
+   
+   function adminPageMove(){
+      location.href="adminPage.do";
+   }
+</script>
 </body>
 </html>
