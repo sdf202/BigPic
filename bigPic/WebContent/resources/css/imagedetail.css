@@ -47,4 +47,10 @@
 	justify-content: space-between;
 }
 
-
+.imgsearch{
+	text-align: right;
+	cursor: pointer;
+	}
+.item{
+	cursor: pointer;
+}

@@ -82,7 +82,9 @@
 				<div class="item">
 					<img
 						src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
-
+					<div class="imgsearch">
+						<i class="far fa-plus-square"></i>
+					</div>
 				</div>
 				<div>
 					<div class="commentBox">
@@ -105,7 +107,9 @@
 						</div>
 						<div class="commentBoxBot">
 							<div class="commentBoxBotT">
-								<div><i class="fas fa-user-circle"></i></div>
+								<div>
+									<i class="fas fa-user-circle"></i>
+								</div>
 								<div class="">xxx님의 댓글</div>
 								<div class="">Hits</div>
 							</div>
@@ -124,7 +128,6 @@
 		<h3>유사한 핀 더보기</h3>
 	</div>
 	<script type="text/javascript">
-		
 		
 	</script>
 </body>
