@@ -3,9 +3,9 @@
 
 <mapper namespace="kr.co.project.users">
 	<select id="insertUser" parameterType="usersDto" >
-		INSERT INTO users
-		VALUES (#{id}, #{pwd}, #{repwd}, #{name}, #{email}, sysdate)
-	</select>
+      INSERT INTO users
+      VALUES ( #{id}, #{pwd}, #{repwd}, #{name}, #{email}, sysdate, usernum_pk_seq.NEXTVAL)
+   </select>
 	
 	<select id="isValidUser" parameterType="String" resultType="usersDto">
         SELECT id, pwd, repwd, name, email, to_char(signup_date,'yyyy/mm/dd') signup_date
