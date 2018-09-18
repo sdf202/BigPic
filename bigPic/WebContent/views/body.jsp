@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -137,12 +137,14 @@
 	</div>
 	<!-- Main -->
 
-
+	
 	<div class="masonry" style="margin: 0 0.1em; margin-top: 30px;">
 		<div class="item">
-			<a href="/bigPic/detail.do"> <img
-				src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
+			<c:forEach var="c" items="${img }">
+			<a href="/bigPic/detail.do"> 
+			<img src="${c.fileDir }">
 			</a>
+			</c:forEach>
 			<div class="pin">
 				<div class="more">
 					추천 핀쓰

@@ -17,5 +17,10 @@ public class MainController {
 		 return new ModelAndView("imageDetail","ok","ok");
 		 		
 	 }
+	 @RequestMapping("/policy.do")
+	 public ModelAndView policy() {
+		 return new ModelAndView("policy","ok","ok");
+	 }
+	 
 	 
 }

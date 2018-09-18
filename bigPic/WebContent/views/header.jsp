@@ -13,7 +13,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <a class="navbar-brand" href="/bigPic/main.do">BigPic</a>
+  <a class="navbar-brand" href="/bigPic/signin.do">BigPic</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,7 +25,7 @@
     </form>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/bigPic/main.do">홈<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/bigPic/signin.do">홈<span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item">
@@ -37,9 +37,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#">공지사항</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">관리자용</a>
-      </li>
+      
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,11 +45,11 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">무료계정 Business 계정만들기</a>
-          <a class="dropdown-item" href="#">설정수정</a>
+          <a class="dropdown-item" href="/bigPic/myPage.do">설정수정</a>
           <a class="dropdown-item" href="#">도움 받기</a>
-          <a class="dropdown-item" href="#">약관 및 개인정보</a>          
+          <a class="dropdown-item" href="/bigPic/policy.do">약관 및 개인정보</a>          
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">로그아웃</a>
+          <a class="dropdown-item" id="logoutBtn" href="#">로그아웃</a>
         </div>
       </li>
 		
@@ -59,28 +57,19 @@
 		<li class="nav-item">   
              <c:choose>
                 <c:when test="${'admin' eq sessionScope.sessionId}">
-                   <a class="nav-link" href="#" onclick="adminPageMove();" >
+                   <a class="nav-link" href="#" onclick="adminPageMove();"  style="color:red">
                       <c:url value="${sessionScope.sessionId }" />
                    </a>
                 </c:when>
                 <c:otherwise>
-                 <a class="nav-link" href="#" onclick="adminPageMove();" >
+                 <a class="nav-link" href="#" onclick="myPageMove();"  style="color:blue">
                       <c:url value="${sessionScope.sessionId }" />
                    </a>
                 </c:otherwise>
              </c:choose>
          </li>
 		
-		<li class="nav-item">
-        	<a class="nav-link" href="#" style="color:red">
-        		<c:out value="${sessionScope.sessionId }"></c:out>
-        	</a>
-      	</li>
-      	<li></li>
-      	<li></li>
-		<li class="nav-item">
-			<a class="nav-link" id="logoutBtn" href="#">LOGOUT</a>
-		</li>
+		
     </ul>
     
   </div>

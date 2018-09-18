@@ -9,6 +9,7 @@
 	<mvc:annotation-driven />
 	
 	<context:component-scan base-package="kr.co.project.users.*">
+	
 	</context:component-scan>
 	
 	<context:component-scan base-package="kr.co.project.admin.*">
@@ -16,7 +17,6 @@
 	
 	
 	<bean id="main" class="kr.co.project.controller.MainController"></bean>
-
 
 	<bean id="file"
 		class="kr.co.project.controller.FileUploadController">

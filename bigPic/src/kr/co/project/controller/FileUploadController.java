@@ -55,7 +55,8 @@ public class FileUploadController {
       
       String fileName=mfile.getOriginalFilename();
       //파일 객체
-      File f = new File(filePath+"/"+fileName);
+       File f= new File(filePath+"/"+fileName);
+      System.out.println(f);
       try {
          mfile.transferTo(f);
       } catch (IllegalStateException e) {
@@ -75,7 +76,7 @@ public class FileUploadController {
    }
 	
 	//@responsbody 
-	// 웹애플리케이션의 모델층에서 리턴한 겨로가
+	// 웹애플리케이션의 모델층에서 리턴한 경로가
 	// 보통 jsp (뷰)로 포워딩 하여 출력 
 	// 이때 뷰페이지를 통하지 않고 바로 출력스트림으로 보내는 것
 	// 파일 다운로드, ajax
