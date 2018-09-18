@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
@@ -19,11 +20,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.co.project.users.dao.ImgDao;
+import kr.co.project.users.dto.ImgDto;
+
 @Controller
 public class FileUploadController {
 	
 	FileValidator fileValidator;
-
+	
+	@Autowired
+	ImgDao imgdao;
+	
 	public void setFileValidator(FileValidator fileValidator) {
 		this.fileValidator = fileValidator;
 	}
@@ -34,7 +41,8 @@ public class FileUploadController {
 	}
 
 	@RequestMapping(value = "/upload.do", method = RequestMethod.POST)
-   public ModelAndView upliad(@ModelAttribute("uploadFile")UploadFile file, HttpServletRequest req, BindingResult result) {
+   public ModelAndView upliad(@ModelAttribute("uploadFile")UploadFile file, HttpServletRequest req, BindingResult result
+		   , @ModelAttribute ImgDto imgdto) {
       //업로드한 파일 객체 가져오기
       //내부적으로 임의의 경로에 파일 보관한다.
       MultipartFile mfile=file.getFile();
@@ -56,6 +64,7 @@ public class FileUploadController {
       String fileName=mfile.getOriginalFilename();
       //파일 객체
        File f= new File(filePath+"/"+fileName);
+      
       System.out.println(f);
       try {
          mfile.transferTo(f);
@@ -66,6 +75,11 @@ public class FileUploadController {
 
          e.printStackTrace();
       }
+      
+      imgdto.setFiledir("/bigPic/data/"+fileName);
+      
+      imgdao.insertOne(imgdto);
+      
       ModelAndView mav=new ModelAndView();
       mav.addObject("fileName", f.getName());
       mav.setViewName("uploadFile");

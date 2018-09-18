@@ -33,4 +33,9 @@ public class ImgDaoImple implements ImgDao{
 		
 	}
 
+	@Override
+	public void insertOne(ImgDto dto) {
+		session.insert("kr.co.project.img.insertImg",dto);
+	}
+
 }

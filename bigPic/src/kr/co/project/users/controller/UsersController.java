@@ -53,7 +53,7 @@ public class UsersController {
 		
 		
 		List<ImgDto> list=imgDao.selectAllImg();
-		System.out.println("list~~~~~~~~~~~~~~ : " + list);
+		/*System.out.println("list~~~~~~~~~~~~~~ : " + list);*/
 		
 		ModelAndView mView = new ModelAndView();
 
@@ -62,7 +62,7 @@ public class UsersController {
 			mView.setViewName("loginOk");
 		} else {
 			mView.addObject("msg", usersdto.getId());
-			/*mView.addObject("img",list);*/
+			mView.addObject("img",list);
 			session.setAttribute("sessionId", dto.getId());
 			session.setMaxInactiveInterval(60 * 30);
 			mView.setViewName("mainPage");

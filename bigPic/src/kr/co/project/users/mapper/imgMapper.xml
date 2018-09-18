@@ -8,4 +8,8 @@
 		select * from images
 	</select>
 
+	<insert id="insertImg" parameterType="imgDto" >
+		insert into images
+		values(imgno, usernum, filedir)
+	</insert>
 </mapper>
