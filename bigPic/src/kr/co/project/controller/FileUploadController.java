@@ -80,6 +80,7 @@ public class FileUploadController {
       
       imgdao.insertOne(imgdto);
       
+      
       ModelAndView mav=new ModelAndView();
       mav.addObject("fileName", f.getName());
       mav.setViewName("uploadFile");

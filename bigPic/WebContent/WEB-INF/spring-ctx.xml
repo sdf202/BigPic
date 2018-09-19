@@ -52,10 +52,6 @@
 	   <constructor-arg ref="SqlSessionFactoryBean" />
 	</bean>
 
-	
-	
-
-
 	<mvc:view-resolvers>
 		<mvc:jsp prefix="/views/" suffix=".jsp" />
 	</mvc:view-resolvers>

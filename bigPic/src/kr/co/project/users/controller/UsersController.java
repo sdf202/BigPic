@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DaoSupport;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,7 +57,7 @@ public class UsersController {
 		/*System.out.println("list~~~~~~~~~~~~~~ : " + list);*/
 		
 		ModelAndView mView = new ModelAndView();
-
+		
 		if (usersdto == null) {
 			mView.addObject("msg", "아이디 혹은 비밀번호를 확인해 주세요.");
 			mView.setViewName("loginOk");

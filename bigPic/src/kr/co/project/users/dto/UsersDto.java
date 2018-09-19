@@ -7,10 +7,19 @@ public class UsersDto {
 	private String name;
 	private String email;
 	private String signup_date;
+	private int usernum_pk;
 	
+	public int getUsernum_pk() {
+		return usernum_pk;
+	}
+
+	public void setUsernum_pk(int usernum_pk) {
+		this.usernum_pk = usernum_pk;
+	}
+
 	public UsersDto() {}
 
-	public UsersDto(String id, String pwd, String repwd, String name, String email, String signup_date) {
+	public UsersDto(String id, String pwd, String repwd, String name, String email, String signup_date, int usernum_pk) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
@@ -18,6 +27,7 @@ public class UsersDto {
 		this.name = name;
 		this.email = email;
 		this.signup_date = signup_date;
+		this.usernum_pk = usernum_pk;
 	}
 
 	public String getId() {

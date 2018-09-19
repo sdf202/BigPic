@@ -198,6 +198,7 @@
 	  <div class="item">
          <a href="/bigPic/detail.do">
          <img src="${c.filedir }">
+
          </a>
          <div class="pin">
             <div class="more" style="width:85%;">
@@ -232,7 +233,7 @@
 	
 
 
-		<div class="item">
+		<!-- <div class="item">
 
 			<img
 				src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
@@ -612,6 +613,6 @@
 		</div>
 
 
-	</div>
+	</div> -->
 </body>
 </html>

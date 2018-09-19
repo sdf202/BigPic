@@ -32,7 +32,7 @@
         <a class="nav-link" href="#">마이페이지</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">업로드</a>
+        <a class="nav-link" onclick="window.open('/bigPic/upload.do','upload','width=430,height=500,location=no,status=no,scrollbars=yes');" style ="cursor: pointer;">업로드</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">공지사항</a>

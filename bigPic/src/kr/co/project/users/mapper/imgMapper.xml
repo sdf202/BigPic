@@ -9,7 +9,11 @@
 	</select>
 
 	<insert id="insertImg" parameterType="imgDto" >
-		insert into images
-		values(imgno, usernum, filedir)
-	</insert>
+      <selectKey keyProperty="usernum" resultType="int" order="BEFORE">
+         select MAX(usernum_pk) from  users
+      </selectKey>
+      insert into images
+      values(imgno_seq.nextval, #{usernum}, #{filedir})
+   </insert>
+
 </mapper>
