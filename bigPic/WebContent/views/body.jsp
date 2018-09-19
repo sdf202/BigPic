@@ -65,7 +65,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <!-- 합치는 부분 -->
+             
                <h3 class="modal-title" id="reportTitle" style="margin-top: -12px;margin-bottom: -12px;"><b>이 핀 신고하기</b></h3>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -73,9 +73,7 @@
             </div>
             <div class="modal-body">
                <form action="sendReport">
-                  
-                  <!-- 합치는 부분 -->
-                  
+                                   
                   <div class="form-group">
                      <h5 style="margin-bottom: -30px;">
                         <label for="exampleSelectGender"><b>스팸</b></label>
@@ -161,9 +159,9 @@
 
    <!-- MODAL REPORT 2 -->
    <div id="stack2" class="modal hide fade" tabindex="-1" data-focus-on="input:first" aria-labelledby="reportTitle" aria-hidden="true">
-                                                      <!-- 합치는 부분 -->
+                                                   
       <div class="modal-dialog modal-dialog-centered" role="document" style="height:350px;">
-                              <!-- 합치는 부분 -->
+                            
          <div class="modal-content" style="text-align:center;height:70%;">
             <div class="modal-header">
                <h3>신고하기</h3>
@@ -196,10 +194,11 @@
 	  
 	  <c:forEach var="c" items="${img }">
 	  <div class="item">
-         <a href="/bigPic/detail.do">
-         <img src="${c.filedir }">
-
+         <a href="/bigPic/detail.do?no=${c.imgno }">
+         <img src="${c.filedir }" name = "img">
+        <input type="hidden" name="imgno" value = "${c.filedir }"/> 
          </a>
+         
          <div class="pin">
             <div class="more" style="width:85%;">
                <span style="text-align:left;">추천 핀</span>
@@ -230,5 +229,9 @@
          </div>
       </div>
       	</c:forEach>
+      	</div>
+      	<script type="text/javascript">
+      	
+      	</script>
 </body>
 </html>

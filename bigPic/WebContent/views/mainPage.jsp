@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="resources/css/main.css" />
 <!-- 합치는 부분 -->
 <link rel="stylesheet" href="resources/css/plusQuestion.css">
-<link rel="stylesheet" href="resources/css/mainSearch.css">
+<link rel="stylesheet" href="resources/css/exportSearch.css">
+<link rel="stylesheet" href="resources/css/headerSearch.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
 </head>

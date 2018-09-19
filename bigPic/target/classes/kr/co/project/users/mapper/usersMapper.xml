@@ -8,7 +8,7 @@
    </select>
 	
 	<select id="isValidUser" parameterType="String" resultType="usersDto">
-        SELECT id, pwd, repwd, name, email, to_char(signup_date,'yyyy/mm/dd') signup_date
+        SELECT id, pwd, repwd, name, email, to_char(signup_date,'yyyy/mm/dd') signup_date, usernum_pk
       	FROM users 
       	WHERE id = #{id} and pwd = #{pwd}
      </select>
