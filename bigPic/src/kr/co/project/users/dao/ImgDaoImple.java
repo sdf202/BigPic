@@ -22,8 +22,9 @@ public class ImgDaoImple implements ImgDao{
 	}
 
 	@Override
-	public void selectOneImg(ImgDto dto) {
-		session.selectOne("kr.co.project.img.selectOneImg",dto);
+	public ImgDto selectOneImg(int no) {
+		
+		return session.selectOne("kr.co.project.img.selectOneImg",no);
 		
 	}
 
@@ -37,5 +38,16 @@ public class ImgDaoImple implements ImgDao{
 	public void insertOne(ImgDto dto) {
 		session.insert("kr.co.project.img.insertImg",dto);
 	}
+
+	@Override
+	public List<ImgDto> selectSomeimg(String cname) {
+	
+		return session.selectList("kr.co.project.img.selectSomeImg",cname);
+	}
+	@Override
+	   public List<ImgDto> searchList(String searchValue) {
+	      
+	      return session.selectList("kr.co.project.img.searchImg",searchValue);
+	   }
 
 }

@@ -156,7 +156,7 @@
 			<input type="text" class="form-control" id="exampleInputFirstName">
 			
 			<h3>사진</h3>
-			<img src="../resources/images/human.png" id="img" alt="" />
+			<img src="resources/images/human.png" id="img" alt="" />
 			<button type="submit" class="btn btn-default" id="exampleInputAccountDisable">
 				<b>사진 변경</b>
 			</button>

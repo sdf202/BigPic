@@ -6,11 +6,26 @@
 
 	<select id="selectAllImg"  resultType="imgDto">
 		select * from images
+		order by imgno desc
 	</select>
 
 	<insert id="insertImg" parameterType="imgDto" >
       insert into images
-      values(imgno_seq.nextval, #{usernum}, #{filedir})
+      values(imgno_seq.nextval, #{usernum}, #{filedir}, #{filename}, #{cname})
    </insert>
+   <select id="selectOneImg" parameterType="int" resultType="imgDto">
+   		select * from images
+   		where imgno = #{imgno}
+   </select>
+   
+   <select id="selectSomeImg" parameterType="String" resultType="imgDto">
+		select * from images
+		where cname = #{cname}
+	</select>
+	<select id="searchImg" resultType="imgDto" parameterType="String">
+      select *
+      from images
+      where filename like '%' || #{filename} || '%'
+   </select>
 
 </mapper>

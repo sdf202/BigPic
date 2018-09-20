@@ -4,7 +4,7 @@
 /**
  * General configs
  */
-.a2a_kit{margin-top:8%;margin-left:33%;}
+.a2a_kit{margin-top:11%;margin-left:33%;}
 /* footer css */
 .footer {
    text-align: center;
@@ -218,17 +218,18 @@ input::placeholder {
 .user_registered-title,
 .user_unregistered-title {
   margin-bottom: 15px;
-  font-size: 1.66rem;
+  font-size: 2.32rem;
   line-height: 1em;
 }
 
 .user_unregistered-text,
 .user_registered-text {
-  font-size: 0.83rem;
+  font-size: 1.2rem;
   line-height: 1.4em;
+  margin-top: 5%;
 }
 .user_unregistered-text2 {
-   font-size:1.2rem;
+   font-size:1.4rem;
    color:#c0c0c0;
 }
 
@@ -258,7 +259,7 @@ input::placeholder {
   top: 50%;
   left: 30px;
   width: calc(50% - 30px);
-  min-height: 560px;
+  min-height: 520px;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
@@ -274,7 +275,7 @@ input::placeholder {
 }
 .user_options-forms .forms_title {
   margin-bottom: 45px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 1em;
   text-transform: uppercase;
@@ -286,10 +287,11 @@ input::placeholder {
 }
 .user_options-forms .forms_field-input {
   width: 100%;
+  margin-top:1%;
   border-bottom: 1px solid #ccc;
   padding: 6px 20px 6px 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: 300;
   color: gray;
   letter-spacing: 0.1rem;
@@ -319,7 +321,7 @@ input::placeholder {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 10px 35px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #242424;
@@ -329,12 +331,12 @@ input::placeholder {
 }
 .forms_buttons-action2 {
   width:100%;
-  margin-top:1%;
-  height:100px;
+  margin-top:8%;
+  height: 100px;
   background-color: #d2d2d2;
   border-radius: 3px;
   padding: 10px 35px;
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #191919;
@@ -345,11 +347,11 @@ input::placeholder {
 
 .forms_buttons-action3 {
   width:100%;
-  margin-top:1%;
+  margin-top:5%;
   background-color: #d2d2d2;
   border-radius: 3px;
   padding: 10px 35px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #191919;
@@ -377,6 +379,7 @@ input::placeholder {
   position: absolute;
   top: 70px;
   left: 40px;
+  margin-top: -6%;
   width: calc(100% - 80px);
   opacity: 0;
   visibility: hidden;
@@ -425,7 +428,7 @@ input::placeholder {
  */
 @media screen and (max-width: 990px) {
   .user_options-forms {
-    min-height: 350px;
+    min-height: 150px;
   }
   .user_options-forms .forms_buttons {
     flex-direction: column;

@@ -9,7 +9,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
-<link rel="stylesheet" href="resources/css/login.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/BusinessLogin.css">
 </head>
 
 <body id="background">
@@ -22,8 +23,10 @@
                <div class="user_options-unregistered">
                   <h2 class="user_unregistered-title">Don't have an account?</h2>
                   <p class="user_unregistered-text">BigPic에 오신 것을 환영합니다.</p>
-                  <button class="user_unregistered-signup" id="signup-button">Sign
-                     up</button>
+                  <p class="user_unregistered-text2" style="margin-top:10px;">비즈니스 성장을 이루세요.</p>
+                  <button class="user_unregistered-signup" id="signup-button">
+                     Sign up
+                  </button>
                </div>
 
                <div class="user_options-registered">
@@ -40,7 +43,7 @@
                   <form class="forms_form" action="signin.do" method="post">
                      <fieldset class="forms_fieldset">
                         <div class="forms_field">
-                           <input type="text" placeholder="ID" name="id" class="forms_field-input" required autofocus />
+                           <input type="text" placeholder="Email" name="id" class="forms_field-input" required autofocus />
                         </div>
                         <div class="forms_field">
                            <input type="password" placeholder="Password" name="pwd" class="forms_field-input" required />
@@ -53,30 +56,33 @@
 
                      <!-- social button -->
                      <div class="modal-body">
-                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                           <a class="a2a_button_facebook"></a> <a
-                              class="a2a_button_twitter"></a> <a
-                              class="a2a_button_google_plus"></a> <a
-                              class="a2a_button_linkedin"></a> <a class="a2a_button_tumblr"></a>
+                        <!-- <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                           <a class="a2a_button_facebook"></a> 
+                           <a class="a2a_button_twitter"></a> 
+                           <a class="a2a_button_google_plus"></a> 
+                           <a class="a2a_button_linkedin"></a> 
+                           <a class="a2a_button_tumblr"></a>
                            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                         </div>
                         <script async src="https://static.addtoany.com/menu/page.js"></script>
                         <script>
                            var a2a_config = a2a_config || {};
                            a2a_config.onclick = 1;
-                        </script>
+                        </script> -->
 
-                        <div style="text-align: center; margin-top: 5%;">
+                        <div style="text-align: center;">
                            <p class="user_registered-text">
-                              계속하면 BigPic <a href="" id="atag2">서비스 약관</a> 및 <a href=""
-                                 id="atag2">개인정보 보호정책</a> 에 동의하는 것으로 간주됩니다.
+                           계정을 만들게 되면 BigPic의 
+                           <a href="" id="atag2">비즈니스 서비스 약관</a> 
+                           및 
+                           <a href="" id="atag2">개인정보 보호정책</a>
+                           에 동의하는 것으로 간주됩니다.
                            </p>
                         </div>
                         <div>
-                           <a href="business.do">
-                           <input type="button" value="Business account"
-                              class="forms_buttons-action2" >
-                              </a>
+                           <a href="login.do">
+                           <input type="button" value="Individual account" class="forms_buttons-action2">
+                           </a>
                         </div>
                      </div>
                   </form>
@@ -86,31 +92,34 @@
                <!-- 회원가입 폼 -->
                <div class="user_forms-signup">
                   <h2 class="forms_title">Sign Up</h2>
-                  <form class="forms_form" action="register.do" method="post"
-                     name="register">
+                  <form class="forms_form" action="register.do" method="post" name="register">
                      <!-- register.do 요청/메소드=>post -->
                      <fieldset class="forms_fieldset">
                         <div class="forms_field">
-                           <input type="text" placeholder="ID" id="id" name="id"
-                              class="forms_field-input" required />
-                           <button class="forms_buttons-action3" id="overlapBtn">ID
-                              Check</button>
+                           <input type="email" placeholder="Email" id="email" name="email" class="forms_field-input" required />
+                           <button class="forms_buttons-action3" id="overlapBtn">Email Check</button>
                         </div>
                         <div class="forms_field">
-                           <input type="password" placeholder="Password" name="pwd"
-                              id="pwd" class="forms_field-input" required />
+                           <input type="password" placeholder="Password" name="pwd" id="pwd" class="forms_field-input" required />
                         </div>
                         <div class="forms_field">
-                           <input type="password" placeholder="Reconfirm Password"
-                              id="repwd" name="repwd" class="forms_field-input" required />
+                           <input type="password" placeholder="Reconfirm Password" id="repwd" name="repwd" class="forms_field-input" required />
                         </div>
                         <div class="forms_field">
-                           <input type="text" placeholder="Name" id="name" name="name"
-                              class="forms_field-input" required />
+                           <input type="text" placeholder="사업체" id="company" name="company" class="forms_field-input"  />
                         </div>
                         <div class="forms_field">
-                           <input type="email" placeholder="Email" id="email" name="email"
-                              class="forms_field-input" required />
+                              <select class="form-control" id="exampleSelectLanguage">
+                                 <option>전문가(예:블로거, 사진작가, 디자이너)</option>
+                                 <option>공인(예:정치인, 운동선수, 음악가, 배우)</option>
+                                 <option>미디어(예:잡지, 신문, TV 뉴스)</option>
+                                 <option>브랜드(예:코카콜라, SF 49ers, Grey Poupon)</option>
+                                 <option>소매(예:Anthropologie, Pottery Barn)</option>
+                                 <option>온라인 마켓플레이스(예:Etsy, Amazon)</option>
+                                 <option>지역 업체(예:레스토랑, 부티크)</option>
+                                 <option>기관/비영리 단체(예:Smithsonian, MoMa)</option>
+                                 <option>기타</option>
+                              </select>
                         </div>
                      </fieldset>
                      <div class="forms_buttons">

@@ -23,6 +23,7 @@
 	<mappers>
 		<mapper resource="kr/co/project/users/mapper/usersMapper.xml"></mapper>
 		<mapper resource="kr/co/project/users/mapper/imgMapper.xml"></mapper>
+		<mapper resource="kr/co/project/users/mapper/adminMapper.xml"></mapper>
 	</mappers>
 </configuration>
   

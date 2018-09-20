@@ -66,7 +66,9 @@ public class UsersController {
          session.setAttribute("sessionNum",usersdto.getUsernum_pk());
          session.setAttribute("sessionId",usersdto.getId());
          session.setMaxInactiveInterval(60 * 30);
+         mView.addObject("main","main");
          mView.setViewName("mainPage");
+         
       }
       
       

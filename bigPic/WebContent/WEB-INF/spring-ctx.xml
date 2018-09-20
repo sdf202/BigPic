@@ -9,17 +9,18 @@
 	<mvc:annotation-driven />
 	
 	<context:component-scan base-package="kr.co.project.users.*">
-	
 	</context:component-scan>
 	
 	<context:component-scan base-package="kr.co.project.admin.*">
 	</context:component-scan>
 	
+	<context:component-scan base-package="kr.co.project.category.*">
+	</context:component-scan>
+	
 	
 	<bean id="main" class="kr.co.project.controller.MainController"></bean>
-
-	<bean id="file"
-		class="kr.co.project.controller.FileUploadController">
+	<bean id="catdetail" class="kr.co.project.controller.CatDetailController" ></bean>
+	<bean id="file"	class="kr.co.project.controller.FileUploadController">
 		<property name="fileValidator" ref="validator"></property>
 	</bean>
 	<bean id="validator"

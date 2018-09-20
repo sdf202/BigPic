@@ -48,6 +48,10 @@
 	</div>
 
 
+	
+	
+	<!-- card -->
+	
 	<div class="card text-center">
 		<div class="card-header" align="left">
 			<div>
@@ -81,7 +85,7 @@
 				</div>
 				<div class="item">
 					<img
-						src="${dto.img }">
+						src="${dto.filedir } ">
 				</div>
 				<div>
 					<div class="commentBox">

@@ -7,9 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="download.do?fileName=${fileName }">${fileName }</a>
-<img src="${filePath }" alt="${fileName }" />
+	<h2>업로드 완료</h2> 
+	<input type="button" value="업로드 완료" onclick="refresh()" />
+	<a href="download.do?fileName=${fileName }">${fileName }</a>
+	<img src="${filePath }" alt="${fileName }" />
 
 
+<script type="text/javascript">
+	function refresh(){
+		window.opener.location.reload();
+		self.close();
+	}
+</script>
 </body>
 </html>
