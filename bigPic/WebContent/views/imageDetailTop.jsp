@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,6 +48,10 @@
 	</div>
 
 
+	
+	
+	<!-- card -->
+	
 	<div class="card text-center">
 		<div class="card-header" align="left">
 			<div>
@@ -74,17 +79,13 @@
 						<div>
 							<a class="send" href="#" data-toggle="modal" data-target="#send">
 								보내기</a>
-							<button
-								onclick="window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');">저장하기</button>
+							<input type="submit" value="Save" id="exampleInputSave" style="" onclick="window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"/>
 						</div>
 					</div>
 				</div>
 				<div class="item">
 					<img
-						src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
-					<div class="imgsearch">
-						<i class="far fa-plus-square"></i>
-					</div>
+						src="${dto.filedir } ">
 				</div>
 				<div>
 					<div class="commentBox">

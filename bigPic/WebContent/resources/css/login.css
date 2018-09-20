@@ -4,17 +4,18 @@
 /**
  * General configs
  */
-.a2a_kit{margin-top:11%;margin-left:33%;}
+.a2a_kit{margin-top:8%;margin-left:33%;}
 /* footer css */
 .footer {
    text-align: center;
    margin-top: -1%;
+   position: relative;
 }
 
 #atag {
-   color: rgb(255, 255, 255);
+   color: #000000;
    font-size: 11px;
-   font-weight: normal;
+   font-weight: bold;
    max-width: 105px;
    padding: 4px 7px;
    text-decoration: blink;
@@ -30,11 +31,18 @@
 }
 
 /* 배경 움직이는 효과 CSS */
-#background {
-   background: url(../images/test.png) repeat 5% 5%;
+/* #background {
+   background: url(../images/backgroundImage.png) repeat 5% 5%;
    position: absolute;
    top: 0; left: 0; right: 0; bottom: 0;
-} 
+}  */
+
+.body{
+   background: url(../images/backgroundImage.png) repeat 5% 5%;
+   position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity:0.5;
+}
  
 * {
   box-sizing: border-box;
@@ -219,6 +227,10 @@ input::placeholder {
   font-size: 0.83rem;
   line-height: 1.4em;
 }
+.user_unregistered-text2 {
+   font-size:1.2rem;
+   color:#c0c0c0;
+}
 
 .user_registered-login,
 .user_unregistered-signup {
@@ -317,11 +329,12 @@ input::placeholder {
 }
 .forms_buttons-action2 {
   width:100%;
-  margin-top:8%;
+  margin-top:1%;
+  height:100px;
   background-color: #d2d2d2;
   border-radius: 3px;
   padding: 10px 35px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #191919;
@@ -332,7 +345,7 @@ input::placeholder {
 
 .forms_buttons-action3 {
   width:100%;
-  margin-top:5%;
+  margin-top:1%;
   background-color: #d2d2d2;
   border-radius: 3px;
   padding: 10px 35px;

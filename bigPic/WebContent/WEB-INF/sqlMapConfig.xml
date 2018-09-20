@@ -5,6 +5,7 @@
 
 	<typeAliases>
 		<typeAlias type="kr.co.project.users.dto.UsersDto" alias="usersDto" />
+		<typeAlias type="kr.co.project.users.dto.ImgDto" alias="imgDto" />
 	</typeAliases>
 
 	<environments default="dev">
@@ -21,6 +22,8 @@
 
 	<mappers>
 		<mapper resource="kr/co/project/users/mapper/usersMapper.xml"></mapper>
+		<mapper resource="kr/co/project/users/mapper/imgMapper.xml"></mapper>
+		<mapper resource="kr/co/project/users/mapper/adminMapper.xml"></mapper>
 	</mappers>
 </configuration>
   

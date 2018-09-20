@@ -1,5 +1,54 @@
 @charset "UTF-8";
 
+#atag {
+	color: rgb(51, 51, 51);
+	font-size:17px;
+	text-decoration: none;
+}
+
+#img{width:120px;height:120px;}
+
+.btnCancel{padding-right:4%;}
+
+#dropdownMenuButton{width:550px;}
+
+#exampleInputEmail{width:550px;}
+#exampleSelectLanguage{width:550px;}
+#exampleSelectNation{width:550px;}
+#exampleInputName{width:250px;}
+#exampleInputFirstName{width:250px;}
+#exampleInputUserName{width:200px;}
+#exampleInputLoc{width:550px;}
+#exampleInputProperty{width:350px;}
+#exampleInputPropertyBtn{color:black;background-color:#c1c1c1;}
+#exampleInputPropertyBtn:hover{
+	color:white;
+	background-color:#ea0000;
+	decoration:none;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#exampleInputCancel{color:white;background-color:#e1e1e1;width:60px;height:45px;}
+#exampleInputCancel:hover{
+	color:white;
+	background-color:#bcbcbc;
+	decoration:none;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#exampleInputSave{color:white;background-color:#ff0b0b;width:120px;height:45px;}
+#exampleInputSave:hover{
+	color:white;
+	background-color:#e10000;
+	decoration:none;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#propertyForm{
+	    display: flex;
+}
+
 label {
 	font: bold;
 	font-size: 18px;
@@ -12,14 +61,26 @@ body {
 
 .smenu {
 	position: fixed;
-	top: 20px;
-	left: 280px;
+	/* top: 20px;
+	left: 400px; */
+	width:250px;
+	margin-left:27%;
+	margin-top:1.2%;
+}
+
+.footer{
+	position: fixed;
+	width:400px;
+	margin-left:55.5%;
+	margin-top:49%;
 }
 
 .inform {
 	position: absolute;
-	top: 10px;
-	left: 480px;
+	/* top: 10px;
+	left: 800px; */
+	width:660px;
+	margin-left: 35%;
 }
 
 /* The switch - the box around the slider */
@@ -90,12 +151,27 @@ p {
 	font-size: 15px;
 	font-weight: bold;
 }
-
-#passmodi, #delete1, #own, #modi1, #modi2, #modi3, #session {
+#own {
 	width: 100px;
-	background-color: gray;
+	background-color: #cdcdcd;
 	border: none;
-	color: #fff;
+	border-radius:10px;
+	color: #000000;
+	padding: 15px 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin: 4px;
+	cursor: pointer;
+}
+
+ #delete1, #modi1, #modi2, #modi3 {
+	width: 100px;
+	background-color: #cdcdcd;
+	border: none;
+	border-radius:10px;
+	color: #000000;
 	padding: 15px 0;
 	text-align: center;
 	text-decoration: none;
