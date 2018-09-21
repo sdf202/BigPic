@@ -11,7 +11,7 @@
 
 	<insert id="insertImg" parameterType="imgDto" >
       insert into images
-      values(imgno_seq.nextval, #{usernum}, #{filedir}, #{filename}, #{cname})
+      values(imgno_seq.nextval, #{usernum}, #{filedir}, #{filename}, #{cname}, #{imgname})
    </insert>
    <select id="selectOneImg" parameterType="int" resultType="imgDto">
    		select * from images
@@ -22,10 +22,11 @@
 		select * from images
 		where cname = #{cname}
 	</select>
+	
 	<select id="searchImg" resultType="imgDto" parameterType="String">
       select *
       from images
-      where filename like '%' || #{filename} || '%'
+      where imgname like '%' || #{imgname} || '%'
    </select>
 
 </mapper>

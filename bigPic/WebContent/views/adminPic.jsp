@@ -31,10 +31,6 @@
 	float: left;
 }
 
-.table-responsive {
-	float: center;
-}
-
 .dropbtn {
 	background-color: #4CAF50;
 	color: white;
@@ -88,11 +84,6 @@ table {
 	width: 100%;
 }
 
-th, td {
-	text-align: left;
-	padding: 8px;
-}
-
 tr:nth-child(even) {
 	background-color: #f2f2f2
 }
@@ -101,10 +92,33 @@ th {
 	background-color: #4CAF50;
 	color: white;
 }
+table,td{
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+}
+img{
+	display: block;
+}
+
+#checkbox{
+	width: 10%;
+}
+#images{
+	width: 40%;
+}
+#imgno{
+	width: 15%;
+}
+#usernum{
+	width: 15%;
+}
+#filedir{
+	width: 20%;
+}
+
+
 </style>
-
-
-
 
 
 </head>
@@ -129,25 +143,20 @@ th {
 	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 
-
 	<div class="dropdown">
-		<button class="dropbtn">
 			<h5>관리자 페이지</h5>
-		</button>
-		<div class="dropdown-content">
-			<a href="adminUser" class="btn btn-danger btn-block" role="button">회원관리</a>
-			<a href="adminPic" class="btn btn-warning btn-block" role="button">게시물관리</a>
-		</div>
+				<a href="adminUser" class="btn btn-danger " role="button">회원관리</a>
+				<a href="adminPic" class="btn btn-warning " role="button">게시물관리</a>
 	</div>
 	<div class="table-responsive">
-		<h3>사진 목록</h3>
+		<h3>게시물 목록</h3>
 		<form action="deleteImg" method="post">
 			<table class="table">
 				<tr>
 				</tr>
 
 				<tr>
-					<th><input type="checkbox" name="chk" id="chk" /></th>
+					<th id="checkbox"><input type="checkbox" name="chk" id="chk" /></th>
 					<th id=images>이미지</th>
 					<th id="imgno">사진번호</th>
 					<th id="usernum">유저번호</th>
@@ -157,7 +166,7 @@ th {
 					<tr>
 						<td><input type="checkbox" name="chk[]" id="ck"
 							value="${idto.imgno }" /></td>
-						<th><img src="${idto.filedir }" /></th>
+						<th><div><img src="${idto.filedir }" style="max-width:300px; min-width: 150px;"/></div></th>
 						<td>${idto.imgno }</td>
 						<td>${idto.usernum}</td>
 						<td>${idto.filedir }</td>

@@ -15,49 +15,47 @@ import kr.co.project.users.dto.UsersDto;
 
 @Controller
 public class AdminController {
-	
-	   @Autowired
-	   private AdminService as;
-	   
-	   @RequestMapping("/adminPage.do")
-	      public  ModelAndView amdin() {
-	      return new ModelAndView("admin");
-	   }
-	   
-	
+   
+      @Autowired
+      private AdminService as;
 
-	//전체 회원 조회	
-	@RequestMapping("/adminUser")
-	public ModelAndView userData() {
-			List<UsersDto> list = as.readUserAll();
-		return new ModelAndView("adminUser","list",list);
-	}
-		
+   //admin 페이지로
+   @RequestMapping("/adminPage.do")
+   public ModelAndView admin() {
+         List<UsersDto> list = as.readUserAll();
+      return new ModelAndView("adminUser","list",list);
+   }
+   
+   //전체 회원 조회
+   @RequestMapping("/adminUser")
+   public ModelAndView userData() {
+         List<UsersDto> list = as.readUserAll();
+      return new ModelAndView("adminUser","list",list);
+   }      
 
-	//회원 삭제
-	@RequestMapping(value="/delete", method=RequestMethod.POST)
-	public String delete(
-			@RequestParam("chk[]")List<Integer> usernum_pks) {
-			for(Integer usernum_pk : usernum_pks)
-				as.deleteUserOne(usernum_pk);
-		return "redirect:/adminUser";
-	}
-	
+   //회원 삭제
+   @RequestMapping(value="/delete", method=RequestMethod.POST)
+   public String delete(
+         @RequestParam("chk[]")List<Integer> usernum_pks) {
+         for(Integer usernum_pk : usernum_pks)
+            as.deleteUserOne(usernum_pk);
+      return "redirect:/adminUser";
+   }   
 
-	//게시물 조회
-	@RequestMapping("/adminPic")
-	public ModelAndView userPic() {
-			List<ImgDto> list = as.readImgAll();
-		return new ModelAndView("adminPic","list",list);
-	}
-	
-	//게시물 삭제
-	@RequestMapping(value="/deleteImg", method=RequestMethod.POST)
-	public String deleteImg(
-			@RequestParam("chk[]")List<Integer> imgnos) {
-			for(Integer imgno : imgnos)
-				as.deleteImgOne(imgno);
-		return "redirect:/adminPic";
-	}
-		
+   //게시물 조회
+   @RequestMapping("/adminPic")
+   public ModelAndView userPic() {
+         List<ImgDto> list = as.readImgAll();
+      return new ModelAndView("adminPic","list",list);
+   }
+   
+   //게시물 삭제
+   @RequestMapping(value="/deleteImg", method=RequestMethod.POST)
+   public String deleteImg(
+         @RequestParam("chk[]")List<Integer> imgnos) {
+         for(Integer imgno : imgnos)
+            as.deleteImgOne(imgno);
+      return "redirect:/adminPic";
+   }
+      
 }

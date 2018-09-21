@@ -93,12 +93,11 @@ body {
 /* 아이콘 */
 
 .fa-ellipsis-h:hover {
-   background-color: #d1d1d1;
+   background-color: #efefef;
 }
 
 .fa-ellipsis-h:active {
-   outline-color: green;
-   outline-style: solid;
+   outline-style: hidden;
 }
 
 .fa-ellipsis-h {
@@ -134,9 +133,11 @@ hr{
     border-width: 1px;
 }
 .dropdown-item:focus, .dropdown-item:hover{
-   background-color: #f9f9f9 !important;
+   background-color: #fafafa!important;
 }
-
+.dropdown-toggle::after{
+	display: contents;
+}
 /* modal */
 btn{
    width: 100%;   

@@ -39,6 +39,19 @@ public class MainController {
 		 
 		 		
 	 }
+	 @RequestMapping("/down.do")
+	 public ModelAndView down(@RequestParam("no") int no) {
+		 List<ImgDto> list =imgDao.selectAllImg();
+		 
+		 ImgDto dto = imgDao.selectOneImg(no);
+		 ModelAndView mav = new ModelAndView();
+		 
+		 mav.addObject("dto", dto);
+		 mav.addObject("img",list);
+		 mav.setViewName("down");
+		 return mav;
+	 }
+	 
 	 @RequestMapping("/policy.do")
 	 public ModelAndView policy() {
 		 return new ModelAndView("policy","ok","ok");

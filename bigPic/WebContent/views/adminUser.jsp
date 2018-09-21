@@ -100,18 +100,16 @@ th {
 <script src = "resources/js/body.js" type="text/javascript">/</script>
 
 
-<div class="dropdown">
-<button class="dropbtn"><h5>관리자 페이지</h5></button>
-	<div class="dropdown-content">
-	<a href="adminUser" class="btn btn-danger btn-block" role="button">회원관리</a>
-	<a href="adminPic" class="btn btn-warning btn-block" role="button">게시물관리</a>
+	<div class="dropdown">
+			<h5>관리자 페이지</h5>
+				<a href="adminUser" class="btn btn-danger " role="button">회원관리</a>
+				<a href="adminPic" class="btn btn-warning " role="button">게시물관리</a>
 	</div>
-</div>
 
 	<!-- <h4>회원 데이터 나오는곳</h4> -->
 	
 	<div class="table-responsive">
-		<h3>유저 목록</h3>
+		<h3>회원 목록</h3>
 	<form action="delete" method="post">
 	<table class="table" >
 	<tr>

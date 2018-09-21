@@ -41,8 +41,26 @@ public class UsersController {
       service.insertUser(dto);
       return "redirect:/login.do";
    }
-
-   @RequestMapping(value = "/signin.do", method = RequestMethod.POST)
+   
+   @RequestMapping(value="/home.do")
+   public ModelAndView home(HttpServletRequest req) {
+      HttpSession session = req.getSession(true);
+      ModelAndView mv=new ModelAndView();
+      List<ImgDto> list = imgDao.selectAllImg();
+      
+      mv.addObject("img", list);
+      
+      session.setAttribute("sessionNum2", "sessionNum");
+      session.setAttribute("sessionId2", "sessionId");
+      session.setMaxInactiveInterval(60 * 30);
+      mv.addObject("img",list);
+      mv.addObject("main","main");
+      mv.setViewName("mainPage2");
+      return mv;
+      
+      
+   }
+   @RequestMapping(value = "/main.do", method = RequestMethod.POST)
    public ModelAndView signin(@ModelAttribute("dto") UsersDto dto,         
          HttpServletRequest req) {
 
@@ -107,6 +125,10 @@ public class UsersController {
    }
    @RequestMapping("/myPage.do")
    public ModelAndView myPage() {
-      return new ModelAndView("myPage","msg","msg");
+      ModelAndView mav = new ModelAndView("mainPage2","msg","msg");
+      mav.addObject("mpage","mpage");
+      
+	  return mav;
+      
    }
 }

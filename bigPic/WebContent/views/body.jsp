@@ -49,11 +49,11 @@
                   <form action="" class="search">
                      <div class="field">
                         <input type="text" class="input-search" id="input-search" name="input-search" required>
-                        <label for="input-search">Search</label>
+                        <label for="input-search">이메일을 입력하세요</label>
                      </div>
                   </form>
                </div>
-               <input type="search" name="search" id="search" class="form-control" id="exampleInputEmail" placeholder="이메일을 입력하세요">
+              
             </div>
             <div class="modal-footer"></div>
          </div>
@@ -204,8 +204,8 @@
                <span style="text-align:left;">추천 핀</span>
             </div>
             <div class="more" style="width:15%;">
-               
-               <input type="submit" value="Save" id="exampleInputSave" style="" onclick="window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"/>
+               <input type="submit" value="Save" id="exampleInputSave" s
+               style="" onclick="window.open('down.do?no=${c.imgno}','down.do?no=${c.imgno }','width=430,height=500,location=no,status=no,scrollbars=yes');"/>
             </div>
             <div class="imore">
                <div class="dropdown">

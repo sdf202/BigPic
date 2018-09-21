@@ -34,6 +34,6 @@
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
 
 <script type="text/javascript" src="resources/js/popup.js"></script>
-<script type="text/javascript" src="resources/js/detail.js"></script>
+
 </body>
 </html>

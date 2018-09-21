@@ -195,7 +195,7 @@
 
 	  <c:forEach var="c" items="${cname }">
 	  <div class="item">
-         <a href="#">
+         <a href="/bigPic/detail.do?no=${c.imgno }">
          <img src="${c.filedir }" name = "img">
         <input type="hidden" name="imgno" value = "${c.filedir }"/> 
          </a>

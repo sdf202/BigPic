@@ -55,13 +55,13 @@
 	<div class="card text-center">
 		<div class="card-header" align="left">
 			<div>
-				<i class="fas fa-chevron-left"></i> <input type="button" class="btn"
-					value="뒤로가기" onclick="goBack()" />
+				<i class="fas fa-chevron-left"></i> 
+				<input type="button" class="btn" value="뒤로가기" onclick="location.href='home.do'" />
 			</div>
 
 		</div>
 		<div class="card-body">
-			<div class="left" onclick="goBack()"></div>
+			<div class="left" onclick="location.href='home.do'"></div>
 			<div class="c-container">
 				<div class="c-div">
 					<div class="c-menu">
@@ -79,7 +79,7 @@
 						<div>
 							<a class="send" href="#" data-toggle="modal" data-target="#send">
 								보내기</a>
-							<input type="submit" value="Save" id="exampleInputSave" style="" onclick="window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');"/>
+							<input type="submit" value="Save" id="exampleInputSave" style="" onclick="#"/>
 						</div>
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 
 			</div>
 
-			<div class="right" onclick="goBack()"></div>
+			<div class="right" onclick="location.href='home.do'"></div>
 		</div>
 	</div>
 

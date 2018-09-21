@@ -37,7 +37,7 @@
             <div class="user_options-forms" id="user_options-forms">
                <div class="user_forms-login">
                   <h2 class="forms_title">Login</h2>
-                  <form class="forms_form" action="signin.do" method="post">
+                  <form class="forms_form" action="main.do" method="post">
                      <fieldset class="forms_fieldset">
                         <div class="forms_field">
                            <input type="text" placeholder="ID" name="id" class="forms_field-input" required autofocus />

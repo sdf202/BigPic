@@ -82,8 +82,9 @@ public class FileUploadController {
       
       imgdto.setFiledir("/bigPic/data/"+fileName);
       imgdto.setCname(cname);
+      imgdto.setFilename(fileName);
       imgdto.setUsernum(usernum_pk);
-      imgdto.setFilename(fname);
+      imgdto.setImgname(fname);
       imgdao.insertOne(imgdto);
       
       
@@ -104,14 +105,17 @@ public class FileUploadController {
    
    @RequestMapping("/download.do")
    @ResponseBody
-   public byte[] download(HttpServletRequest req, @RequestParam("fileName")String fileName, HttpServletResponse resp) throws IOException {
+   public byte[] download(HttpServletRequest req, @RequestParam("imgno")int fileNo, HttpServletResponse resp) throws IOException {
       // download.do?filename = ${fileName}
       // 파일의 절대경로 
       String filePath = req.getSession().getServletContext().getRealPath("/data");
       
       System.out.println("파일 디렉토리 경로 " + filePath);
+      ImgDto dto = imgdao.selectOneImg(fileNo);
+      
+      
       // 파일의 절대 경로
-      String absFilePath = filePath + "/" +fileName;
+      String absFilePath = filePath + "/" +dto.getFilename();
       System.out.println("파일 절대 경로 : "+ absFilePath );
       
       File f = new File(absFilePath);

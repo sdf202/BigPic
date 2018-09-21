@@ -46,7 +46,6 @@
 			<jsp:include page="searchBody.jsp">
 				<jsp:param value="" name="" />
 			</jsp:include>
-
 		</c:when>
 		<c:when test="${mpage eq 'mpage' }">
 			<jsp:include page="myPage.jsp">

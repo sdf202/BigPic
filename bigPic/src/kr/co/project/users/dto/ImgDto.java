@@ -6,18 +6,20 @@ public class ImgDto {
 	private String filedir;
 	private String filename;
 	private String cname;
+	private String imgname;
 	
 	public ImgDto() {
 		
 	}
 
-	public ImgDto(int imgno, int usernum, String filedir, String filename, String cname) {
+	public ImgDto(int imgno, int usernum, String filedir, String filename, String cname, String imgname) {
 		super();
 		this.imgno = imgno;
 		this.usernum = usernum;
 		this.filedir = filedir;
 		this.filename = filename;
 		this.cname = cname;
+		this.imgname = imgname;
 	}
 
 	public int getImgno() {
@@ -59,5 +61,15 @@ public class ImgDto {
 	public void setCname(String cname) {
 		this.cname = cname;
 	}
+
+	public String getImgname() {
+		return imgname;
+	}
+
+	public void setImgname(String imgname) {
+		this.imgname = imgname;
+	}
+
+	
 	
 }
